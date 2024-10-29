@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* General header styling */
+header {
+    background-color: #fff; /* White background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side: Logo container */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px; /* Adjust the size of your logo */
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Right side: Navigation and partner logo */
+.nav-and-partner {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation menu */
+nav {
+    margin-right: 20px; /* Space between nav and partner logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between each link */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* On hover, change background color */
+.nav-item:hover {
+    background-color: #00d1f9;
+}
+
+/* Highlight the active page */
+.active {
+    background-color: #00d1f9;
+}
+
+/* Partner logo */
+.partner-logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.partner-logo {
+    height: 60px; /* Adjust based on your image */
+}
+
+
+
+
+/* Gallery Section */
+.gallery-container {
+    padding: 20px;
+    text-align: center;
+    color: #061a3a;
+}
+
+.gallery-phase {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.gallery-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    display: block;
+    margin: 50px auto;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #061a3a;
+    color: rgb(245, 244, 244);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between the 3 sections */
+    align-items: center;
+    max-width: 1200px; /* Optional: Limit the width of the footer content */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 20px;
+}
+
+.left-text {
+    text-align: left;
+    flex: 1; /* Ensures this section takes up space on the left */
+}
+
+.right-text {
+    text-align: right;
+    flex: 1; /* Ensures this section takes up space on the right */
+}
+
+.social-icons {
+    text-align: center;
+    flex: 1; /* Ensures this section stays in the center */
+}
+
+.social-icons a {
+    color: rgb(255, 255, 255);
+    margin: 0 10px;
+    font-size: 1.5em; /* Size of the icons */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00d1f9; /* Light green color on hover */
+}
+
+footer p {
+    margin: 0; /* Removes any extra margin */
+}

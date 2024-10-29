@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nallampatti</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="Dashboard.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+    <header>
+        <div class="navbar">
+            <!-- Left side: Site logo -->
+            <div class="logo-container">
+                <img src="Logos\iccw-logo-white.png" alt="ICCW Logo" class="logo">
+                <span class="site-name">Nallampatti</span>
+            </div>
+    
+            <!-- Right side: Navigation menu and Partner logo -->
+            <div class="nav-and-partner">
+                <!-- Navigation links -->
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-item ">Home</a></li>
+                        <li><a href="Project insights.html" class="nav-item">Project Insights</a></li>
+                        <li><a href="Dashboard.html" class="nav-item active">Dashboard</a></li>
+                        <li><a href="Gallery.html" class="nav-item">Gallery</a></li>
+                        <li><a href="Contact Us.html" class="nav-item">Contact Us</a></li>
+                    </ul>
+                </nav>
+    
+                <!-- Partner logo -->
+                <div class="partner-logo-container">
+                    <img src="Logos\IITM-500x500.png" alt="IITM Logo" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li id="years-button">
+                    <a href="#">
+                        <i class="fa fa-calendar"></i>
+                        <div>Select Year</div>
+                    </a>
+                </li>
+                <div id="years-content" class="hidden">
+                    <li id="2021-active">
+                        <a href="#" id="year-2021">
+                            <i class="fa fa-caret-right"></i>
+                            <div>2021</div>
+                        </a>
+                    </li>
+                    
+                    <li id="year-2022-hover">
+                        <a href="#">
+                            <i class="fa fa-caret-right"></i>
+                            <div>2022</div>
+                        </a>
+                        <!-- Sub-options for "2022" -->
+                        <ul class="sub-options hidden" id="year-2022-options">
+                            <li>
+                                <a href="#" id="health-survey-dashboard">Health Survey</a>
+                            </li>
+                            <li>
+                                <a href="#" id="water-quality-dashboard">Water Quality</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" id="year-2024">
+                            <i class="fa fa-caret-right"></i>
+                            <div>2024 (Live)</div>
+                            <i class="fa fa-circle blinking" style="color: #5bf36b;"></i>
+
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- Main Dashboard Content -->
+        <!-- Health Survey Dashboard -->
+
+        <!-- Health Survey Dashboard -->
+<div class="main-dashboard hidden" id="health-dashboard-content">
+    <div class="row col-md-12">
+   
+        <!-- Cards for Health Survey Data -->
+        <div class="col-md-3">
+            <div class="card" style="max-height: 142px;padding: 10px;display: flex;justify-content: space-between;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border-radius: 10px;flex-direction: row;height: 85px;">
+                <div class="card-content" style="flex-grow: 1; text-align: left;">
+                    <div class="number" style="font-size: 24px; font-weight: bold; color: #00bfff;">3,874</div>
+                    <div class="card-name" style="font-size: 12px; color: #333;">Total Population</div>
+                </div>
+                <div class="icon-box" style="font-size: 24px; color: #333;">
+                    <i class="fa fa-users"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card" style="max-height: 142px;padding: 10px;display: flex;justify-content: space-between;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border-radius: 10px;flex-direction: row;height: 85px;">
+                <div class="card-content" style="flex-grow: 1; text-align: left;">
+                    <div class="number" style="font-size: 24px; font-weight: bold; color: #00bfff;">1,537</div>
+                    <div class="card-name" style="font-size: 12px; color: #333;">Surveyed Population</div>
+                </div>
+                <div class="icon-box" style="font-size: 24px; color: #333;">
+                    <i class="fa fa-server"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card" style="max-height: 142px;padding: 10px;display: flex;justify-content: space-between;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border-radius: 10px;flex-direction: row;height: 85px;">
+                <div class="card-content" style="flex-grow: 1; text-align: left;">
+                    <div class="number" style="font-size: 24px; font-weight: bold; color: #00bfff;">446</div>
+                    <div class="card-name" style="font-size: 12px; color: #333;">Individuals reported with diseases</div>
+                </div>
+                <div class="icon-box" style="font-size: 24px; color: #333;">
+                    <i class="fa fa-stethoscope"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="card" style="max-height: 142px;padding: 10px;display: flex;justify-content: space-between;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);border-radius: 10px;flex-direction: row;height: 85px;">
+                <div class="card-content" style="flex-grow: 1; text-align: left;">
+                    <div class="number" style="font-size: 24px; font-weight: bold; color: #00bfff;">1,092</div>
+                    <div class="card-name" style="font-size: 12px; color: #333;">Individuals reported with no disease</div>
+                </div>
+                <div class="icon-box" style="font-size: 24px; color: #333;">
+                    <i class="fa fa-heartbeat"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <!-- Charts for Health Survey -->
+    <div class="row mt-4 col-md-12">
+        <div class="col-md-4" style="padding-right: 2px;padding-left: 2px;">
+            <div class="chart-container">
+              
+                <canvas id="lineChart" width="468" height="468" ></canvas>
+            </div>
+        </div>
+        
+        <div class="col-md-4" style="padding-right: 2px;padding-left: 2px;">
+            <div class="chart-container">
+              
+                <canvas id="doughnut" width="468" height="468"></canvas>
+            </div>
+        </div>
+        
+        <div class="col-md-4" style="padding-right: 2px;padding-left: 2px;">
+            <div class="chart-container">
+               
+                <canvas id="polarChart" width="468" height="468"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+        <!-- Water Quality Dashboard -->
+        <div class="main-dashboard hidden" id="water-dashboard-content">
+            <div class="row">
+                <!-- Left side large container - col-md-9 -->
+                <div class="col-md-10">
+                    <!-- Container covering 3/4th of the page -->
+                    <div class="large-container">
+                        <iframe src="2022.html" title="2022 Water Quality Data" style="width: 100%;height: 75vH;"></iframe>
+                    </div>
+                </div>
+        
+                <!-- Right side with stacked cards - col-md-3 -->
+                <div class="col-md-2 d-flex flex-column">
+                    <!-- 4 Ticker Boxes -->
+                    <div class="card mb-3">
+                        <div class="card-content text-center">
+                            <div class="card-name" style="background: #061a3a; color: white;">Year: 2022</div>
+                       </div>
+                       
+                       
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-content text-center">
+                            <div class="card-name">Borewell</div>
+                            <div class="number">8</div>
+                           
+                        </div>
+                       
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-content text-center">
+                            <div class="card-name">Openwell</div>
+                            <div class="number">22</div>
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-content text-center">
+                            <div class="card-name">Above Permissible</div>
+                            <div class="number">  <img src="redpin.png" style="width: 30px;"></div>
+                           
+                            
+                        </div>
+                       
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-content text-center">
+                            <div class="card-name">Desirable Values</div>
+                            <div class="number">  <img src="bluepin.png" style="width: 30px;"></div>
+                        
+                            
+                        </div>
+                       
+                    </div>
+                      <!-- New Water Quality Data Section -->
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                   
+                  
+                        <a href="Nalampatti_WaterQuality2022_download_ICCW.xlsx" class="btn btn-primary"> Download Water Quality Data 2022</a>
+                    
+                </div>
+            </div>
+                </div>
+            </div> 
+        </div>
+
+       <!-- 2021 Dashboard -->
+<div class="main-dashboard hidden" id="dashboard-2021">
+    <div class="row">
+        <!-- Left side large container - col-md-9 -->
+        <div class="col-md-10" style="padding-right: 2px;">
+            <!-- Container covering 3/4th of the page -->
+            <div class="large-container">
+                <iframe src="2021.html" title="2021 Water Quality Data" style="width: 100%;height: 75vH;"></iframe>
+            </div>
+        </div>
+
+        <!-- Right side with stacked cards - col-md-3 -->
+        <div class="col-md-2 d-flex flex-column">
+            <!-- 4 Ticker Boxes -->
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                    <div class="card-name" style="background: #061a3a; color: white;">Year: 2021</div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                    <div class="card-name">No. of Borewells</div>
+                    <div class="number">8</div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                    <div class="card-name">No. of Openwells</div>
+                    <div class="number">22</div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                    <div class="card-name">Values Above Permissible</div>
+                    <div class="number"><img src="redpin.png" style="width: 30px;"></div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                    <div class="card-name">Desirable Values</div>
+                    <div class="number"><img src="bluepin.png" style="width: 30px;"></div>
+                </div>
+            </div>
+            <!-- New Water Quality Data Section -->
+            <div class="card mb-3">
+                <div class="card-content text-center">
+                   
+                  
+                        <a href="Nalampatti_WaterQuality2021_download_ICCW.xlsx" class="btn btn-primary"> Download Water Quality Data 2021</a>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+        <!-- 2024 Dashboard -->
+        <div class="main-dashboard hidden" id="dashboard-2024">
+            
+        </div>
+
+  
+ 
+
+  <!-- Chart.js Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Your Chart.js files -->
+  <script src="chart1.js"></script>
+  <script src="chart2.js"></script>
+  <script src="chart3.js"></script>
+  <script src="chart4.js"></script>
+   
+        <!-- Footer Section -->
+<footer style="background-color: #333; color: #fff; padding: 1rem; text-align: center; margin-top: auto;">
+    <div class="footer-content">
+        <!-- Left side: Developed by ICCW -->
+        <div class="left-text">
+            <p>Developed by ICCW</p>
+        </div>
+
+        <!-- Center: Social Media Icons -->
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/ICCWIndia" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/iccw/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <!-- Twitter -->
+            <a href="https://x.com/ICCWIndia" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/iccw_iitm/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- YouTube-->
+            <a href="https://www.youtube.com/@iccwnews7325" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+
+        <!-- Right side: All Rights Reserved -->
+        <div class="right-text">
+            <p>© 2020 ICCW. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+   <!-- Main Script -->
+   <script>
+    const sidebar = document.querySelector('.sidebar');
+    const yearsButton = document.getElementById('years-button');
+    const yearsContent = document.getElementById('years-content');
+    const healthSurveyDashboard = document.getElementById('health-survey-dashboard');
+    const waterQualityDashboard = document.getElementById('water-quality-dashboard');
+    const healthDashboardContent = document.getElementById('health-dashboard-content');
+    const waterDashboardContent = document.getElementById('water-dashboard-content');
+    const year2021 = document.getElementById('year-2021');
+    const dashboard2021 = document.getElementById('dashboard-2021');
+    const year2022 = document.getElementById('year-2022-hover');
+    const year2022Options = document.getElementById('year-2022-options');
+    const year2024 = document.getElementById('year-2024');
+    const dashboard2024 = document.getElementById('dashboard-2024');
+
+    // Toggle sidebar
+    yearsButton.addEventListener('click', function () {
+        sidebar.classList.toggle('expanded');
+        yearsContent.classList.toggle('hidden');
+    });
+
+    // Toggle 2022 sub-menu
+    year2022.addEventListener('click', function (e) {
+        e.preventDefault();
+        year2022Options.classList.toggle('hidden');
+        activateMenuItem(year2022);
+    });
+
+    // Show specific dashboards
+    function showDashboard(dashboard, menuItem) {
+        document.querySelectorAll('.main-dashboard').forEach(dash => dash.classList.add('hidden'));
+        dashboard.classList.remove('hidden');
+        activateMenuItem(menuItem);
+    }
+
+    // Sidebar menu item click events
+    healthSurveyDashboard.addEventListener('click', function () {
+        showDashboard(healthDashboardContent, healthSurveyDashboard);
+    });
+    waterQualityDashboard.addEventListener('click', function () {
+        showDashboard(waterDashboardContent, waterQualityDashboard);
+    });
+    year2021.addEventListener('click', function () {
+        showDashboard(dashboard2021, year2021);
+    });
+    year2024.addEventListener('click', function () {
+        showDashboard(dashboard2024, year2024);
+    });
+
+    // Highlight active menu item
+    function activateMenuItem(menuItem) {
+        document.querySelectorAll('.sidebar ul li').forEach(item => item.classList.remove('active-background'));
+        menuItem.closest('li').classList.add('active-background');
+    }
+
+    // Load 2022 Health Survey dashboard by default on page load
+    window.addEventListener('load', function () {
+        // Expand 2022 sub-menu if it’s initially collapsed
+        year2022Options.classList.remove('hidden');
+        // Show Health Survey dashboard by triggering a click
+        healthSurveyDashboard.click();
+    });
+</script>
+
+
+
+</body>
+</html>
